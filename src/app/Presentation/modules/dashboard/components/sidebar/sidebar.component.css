@@ -1,0 +1,64 @@
+.sidebar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.actions{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.action{
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+
+}
+
+.action:hover{
+  background-color: var(--hover);
+  /* color: var(--main-color); */
+
+}
+
+
+.user-profile{
+  /* border: 1px solid gainsboro; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px 5px; */
+  border-radius: 8px;
+}
+
+.user-profile span{
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.logo span{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}

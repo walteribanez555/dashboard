@@ -1,0 +1,109 @@
+.navbar{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  background-color: var(--body-bg);
+}
+
+
+.list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 0px;
+}
+
+.route{
+  display: flex;
+  flex-direction: row;
+  color: var(--text-color);
+  align-items: flex-start;
+  justify-content: flex-start;
+  outline: none;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+
+}
+
+.route:hover{
+  background-color: var(--hover);
+}
+
+.route:hover span{
+  padding-left: 30px;
+  transition: .3s all ease-in-out;
+}
+
+
+.route i{
+  width: 20px;
+  height: 20px;
+}
+
+.route span{
+  padding-left: 20px;
+  transition: .3s all ease-in-out;
+
+}
+
+.toggle-mode {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.route.active{
+  color: var(--main-color);
+  /* font-weight: bold; */
+}
+
+
+.button-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: var(--main-color) /* Change color when the switch is on */
+}
+
+.toggle-label::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s;
+}
+
+.toggle-input:checked + .toggle-label::after {
+  transform: translateX(26px); /* Move the knob to the right when the switch is on */
+}

@@ -1,0 +1,42 @@
+<div class="navbar" [class.expanded]="nvState" >
+
+  <button class="expand-navbar-btn"  [class.isExpandState]="nvState"  (click)="onClickNavBarExpandable()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <!-- <span>Aloha</span> -->
+
+  <div class="list">
+    <a class="route" routerLink="./admin"  >
+      <i class="fa-solid fa-globe"></i>
+      <span>Dashboard</span>
+
+    </a>
+    <a class="route"  routerLink="./folders" >
+      <i class="fa-solid fa-folder-open"></i>
+      <span>Mis Carpetas</span>
+
+    </a>
+    <a class="route" routerLink="./saveds" >
+      <i class="fa-solid fa-bookmark"></i>
+      <span>Mis Guardados</span>
+
+    </a>
+    <a class="route active" routerLink="./downloads">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <span>Descargas</span>
+
+    </a>
+
+
+  </div>
+
+
+  <div class="toggle-mode">
+    <div class="button-switch"  (click)="onClickNavBarThemeMode()" id="buttonSwitch">
+      <input type="checkbox" id="toggle" class="toggle-input"  [(ngModel)]="themeStatus" />
+      <label for="toggle" class="toggle-label"></label>
+    </div>
+    <span>Modo Oscuro</span>
+  </div>
+
+</div>

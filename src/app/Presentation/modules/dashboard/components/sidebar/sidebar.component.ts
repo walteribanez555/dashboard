@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-layout-page',
+  selector: 'sidebar',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  template: `<p>Aloha works!</p>`,
-  styleUrl: './LayoutPage.component.css',
+  templateUrl : './sidebar.component.html',
+  styleUrl: './sidebar.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LayoutPageComponent { }
+export class SidebarComponent { }

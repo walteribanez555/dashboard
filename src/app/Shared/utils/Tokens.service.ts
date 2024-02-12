@@ -5,36 +5,32 @@ import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
   providedIn: 'platform',
 })
 export class TokensService {
-  constructor(@Inject(DOCUMENT) private document: Document) {
-    this.localStorage = document.defaultView?.localStorage;
-  }
+  // constructor(@Inject(DOCUMENT) private document: Document) {
+  //   this.localStorage = document.defaultView?.localStorage;
+  // }
 
-  localStorage : any;
-
+  // localStorage: any;
 
   getToken(): string | null {
-    if (this.localStorage) {
-      return this.localStorage.getItem('Authorization');
+    // if (this.localStorage) {
+      return localStorage.getItem('Authorization');
     }
-    throw ('No Browser');
-  }
+    // throw 'No Browser';
 
   deleteToken() {
-    if (this.localStorage) {
-      this.localStorage.removeItem('Authorization');
+    // if (this.localStorage) {
+      localStorage.removeItem('Authorization');
       return;
-    }
-    throw ('No Browser');
+    // }
+    // throw 'No Browser';
   }
 
   setToken(token: string) {
-    if (this.localStorage) {
+    // if (this.localStorage) {
       this.deleteToken();
-      this.localStorage.setItem('Authorization', token);
-      return;
-    }
-    throw ('No Browser');
-
-
+      localStorage.setItem('Authorization', token);
+      // return;
+    // }
+    // throw 'No Browser';
   }
 }

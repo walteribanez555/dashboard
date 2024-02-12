@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <sidebar></sidebar>
+
+
+  <div class="data">
+    <navbar [nvState]="stateNavBar" [themeStatus]="isDarkTheme"   (onChangeNavBarState)="onChangeStateNavBar($event)"  (onChangeBtnThemeMode)="toggleTheme()"></navbar>
+
+    <div class="content" [class.isFullWidth]="!stateNavBar">
+      <router-outlet></router-outlet>
+      <!-- <span>Hola Mundo</span> -->
+    </div>
+
+  </div>
+
+
+</div>
